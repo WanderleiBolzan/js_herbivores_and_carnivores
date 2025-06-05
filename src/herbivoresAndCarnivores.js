@@ -20,11 +20,8 @@ class Animal {
   }
 
   die() {
-    const index = Animal.alive.indexOf(this);
-
-    if (index > -1) {
-      Animal.alive.splice(index, 1);
-    }
+    // Usando filter para remover o animal morto do array Animal.alive
+    Animal.alive = Animal.alive.filter((animal) => animal !== this);
   }
 }
 
